@@ -1,7 +1,7 @@
 Type: Package
 Package: regcensus
 Title: RegCensus API
-Version: 1.0
+Version: 1.0.0
 Author: QuantGov
 Maintainer: QuantGov <info@quantgov.org>
 Description: This package allows users to access data from the RegCensusAPI. The RegCensusAPI is an API client that connects to the RegData regulatory restrictions data by the Mercatus Center at George Mason University. RegData uses machine learning algorithms to quantify the number of regulatory restrictions in a jurisdiction. You can find out more about RegData from http://www.quantgov.org.
