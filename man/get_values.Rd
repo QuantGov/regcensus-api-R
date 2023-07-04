@@ -44,11 +44,17 @@ get_values(
 
 \item{agency}{Agency ID, default value is NULL}
 
+\item{cluster}{Cluster ID}
+
 \item{label}{Industry code using the jurisdiction-specific coding system (returns all 3-digit industries by default), default value is NULL}
+
+\item{industry}{industry is deprecated; use label}
 
 \item{filtered}{Exclude poorly-performing industry results (use of unfiltered results is NOT recommended), default value is TRUE}
 
 \item{labellevel}{Level of NAICS industries to include, default value is 3}
+
+\item{industryLevel}{industryLevel is deprecated; use labellevel}
 
 \item{labelsource}{classification standard (NAICS, BEA, SOC), default value of "NAICS"}
 
@@ -57,6 +63,8 @@ get_values(
 \item{download}{If not False, a path location for a downloaded csv of the results, default value is FALSE}
 
 \item{page}{Page Number of the Response, default value is NULL}
+
+\item{date}{date is deprecated, use year now}
 
 \item{verbose}{Print out the url of the API call (useful for debugging), default value is 0}
 }

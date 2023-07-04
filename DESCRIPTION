@@ -14,7 +14,8 @@ Imports:
     jsonlite,
     stringr,
     httr,
-    tidyverse
+    tidyverse,
+    dplyr
 Suggests: 
     knitr,
     rmarkdown,

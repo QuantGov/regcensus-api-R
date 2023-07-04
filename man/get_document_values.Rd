@@ -4,16 +4,39 @@
 \alias{get_document_values}
 \title{get_document_values}
 \usage{
-get_document_values(...)
+get_document_values(
+  series,
+  jurisdiction,
+  year,
+  documentType = 1,
+  summary = FALSE,
+  dateIsRange = TRUE,
+  country = FALSE,
+  agency = NULL,
+  cluster = NULL,
+  label = NULL,
+  industry = NULL,
+  filtered = TRUE,
+  labellevel = 3,
+  industryLevel = NULL,
+  labelsource = "NAICS",
+  version = NULL,
+  download = FALSE,
+  page = NULL,
+  date = NULL,
+  verbose = 0
+)
 }
 \arguments{
+\item{series}{Series ID (s)}
+
 \item{jurisdiction}{ID for the jurisdiction}
 
 \item{year}{Year(s) of data}
 
 \item{documentType}{ID for type of document, default value of 1}
 
-\item{summary}{Return summary instead of document level data (only one year of data is allowed for document level data), default value is TRUE}
+\item{summary}{Return summary instead of document level data (only one year of data is allowed for document level data), default value is FALSE here}
 
 \item{dateIsRange}{Indicating whether the time parameter is range or should be treated as single data points, default value is TRUE}
 
@@ -21,15 +44,27 @@ get_document_values(...)
 
 \item{agency}{Agency ID, default value is NULL}
 
+\item{cluster}{Cluster ID}
+
 \item{label}{Industry code using the jurisdiction-specific coding system (returns all 3-digit industries by default), default value is NULL}
+
+\item{industry}{industry is deprecated; use label}
 
 \item{filtered}{Exclude poorly-performing industry results (use of unfiltered results is NOT recommended), default value is TRUE}
 
 \item{labellevel}{Level of NAICS industries to include, default value is 3}
 
+\item{industryLevel}{industryLevel is deprecated; use labellevel}
+
 \item{labelsource}{classification standard (NAICS, BEA, SOC), default value of "NAICS"}
 
 \item{version}{Version ID for datasets with multiple versions (if no ID is given, returns most recent version), default value is NULL}
+
+\item{download}{If not False, a path location for a downloaded csv of the results, default value is FALSE}
+
+\item{page}{Page Number of the Response, default value is NULL}
+
+\item{date}{date is deprecated, use year now}
 
 \item{verbose}{Print out the url of the API call (useful for debugging), default value is 0}
 }
