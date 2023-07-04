@@ -220,7 +220,7 @@ expect_warning(get_values(series = array(c(1,28,33,36)), jurisdiction = 38,
 
 expect_invisible(get_values(series = array(c(1,28,33,36)), jurisdiction = 38,
                             year = array(c(1970,2003,2004,2018,2020)),
-                            download="testcsvfile.csv"))
+                            download="regdatamultiplefromr.csv"))
 
 
 #get_document_values

@@ -76,8 +76,5 @@ Get values for a specific jurisdiction, series, and year
 }
 \examples{
 get_values(series = array(c(1,28,33,36)), jurisdiction = 38,
-          year = array(c(1970,2003,2004,2018,2020)),
-          download="regdatamultiplefromr.csv")
-get_values(series = array(c(1,28,33,36)), jurisdiction = 38,
           year = array(c(1970,2003,2004,2018,2020)), country=TRUE)
 }
