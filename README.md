@@ -14,7 +14,7 @@ We put together a short video tutorial, showing some of the basics of the API li
 The RegCensus R library is available on CRAN. To install-
 
 ```
-$ install.packages("regcensus")
+install.packages("regcensus")
 ```
 
 Once installed, import the library, using the following:
