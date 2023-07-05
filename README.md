@@ -164,7 +164,7 @@ Valid values for industries include the industry codes specified in the classifi
 In the example below, for the below series, we can request data for the two industries 111 and 33 by the following code snippet.
 
 ```
-get_values(series = array(c(1,28,33,36)), jurisdiction = 38, year = array(c(1990, 2000)), label = array(c(111, 33)), agency = 0)
+get_values(series = array(c(1,28,33,36)), jurisdiction = 38, year = array(c(1990, 2000)), label = 111, agency = 0)
 ```
 
 ### Document-Level Values
@@ -208,7 +208,7 @@ agencies <- get_agencies(jurisdictionID = 38)
 agency_by_industry <- get_values(series = array(c(1,28,33,36)), 
                                 jurisdiction = 38, 
                                 year = array(c(1990, 2000)), 
-                                label = array(c(111,33)), 
+                                label = 111, 
                                 agency = 0)
 agency_restrictions_ind = merge(agency_by_industry, agencies, by='agency_id')
 ```
