@@ -183,7 +183,7 @@ Alternatively, we can use the  __get_document_values__ function as in the follow
 get_document_values(series = array(c(1,2)), jurisdiction = 38, year = 2019)
 ```
 
-Note that for document-level queries, a full date (not just the year) is often required. See the __get_series__ function for specifics by jurisdiction.
+See the __get_series__ function for specifics by jurisdiction.
 
 ### Version
 
