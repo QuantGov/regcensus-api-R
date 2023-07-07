@@ -16,11 +16,22 @@ reading_time(words, workday = 8, workweek = 5, workyear = 50)
 \item{workyear}{default value of 50 week work year}
 }
 \value{
-A string detailing how long it takes to read a document based on how many words the document has. The function assumes an 8 hour work-day, a 5 day work-week, and a 50 week work-year.
+A string detailing how long it takes to read a document based on
+how many words the document has. The function assumes an 8 hour work-day,
+a 5 day work-week, and a 50 week work-year.
+
+A string detailing how long it takes to read a document based
+on how many words the document has. The function assumes an 8 hour work-day,
+a 5 day work-week, and a 50 week work-year.
 }
 \description{
-Computes the time it takes to read a document based on the words a document has.
+Computes the time it takes to read a document based on the words a document
+has.
+
+Computes the time it takes to read a document based on the words a
+document has.
 }
 \examples{
+reading_time(1200000, workday = 8, workweek = 5, workyear = 50)
 reading_time(1200000, workday=8, workweek=5, workyear=50)
 }

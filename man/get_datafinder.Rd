@@ -4,15 +4,16 @@
 \alias{get_datafinder}
 \title{get_datafinder}
 \usage{
-get_datafinder(jurisdiction, documentType = NULL)
+get_datafinder(jurisdiction, document_type = NULL)
 }
 \arguments{
 \item{jurisdiction}{ID for the jurisdiction}
 
-\item{documentType}{ID for type of document, default value is NULL}
+\item{document_type}{ID for type of document, default value is NULL}
 }
 \value{
-Returns dataframe with the series and years available, along with the endpoints to access the data
+Returns dataframe with the series and years available,
+         along with the endpoints to access the data
 }
 \description{
 Get API info for a specific jurisdiction and documentType

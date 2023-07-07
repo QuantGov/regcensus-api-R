@@ -8,18 +8,18 @@ get_values(
   series,
   jurisdiction,
   year,
-  documentType = 1,
+  document_type = 1,
   summary = TRUE,
-  dateIsRange = TRUE,
+  date_is_range = TRUE,
   country = FALSE,
   agency = NULL,
   cluster = NULL,
   label = NULL,
   industry = NULL,
   filtered = TRUE,
-  labellevel = 3,
-  industryLevel = NULL,
-  labelsource = "NAICS",
+  label_level = 3,
+  industry_level = NULL,
+  label_source = "NAICS",
   version = NULL,
   download = FALSE,
   page = NULL,
@@ -34,42 +34,62 @@ get_values(
 
 \item{year}{Year(s) of data}
 
-\item{documentType}{ID for type of document, default value of 1}
+\item{document_type}{ID for type of document, default value of 1}
 
-\item{summary}{Return summary instead of document level data (only one year of data is allowed for document level data), default value is TRUE}
+\item{summary}{Return summary instead of document level data
+(only one year of data is allowed for document level data),
+default value is TRUE}
 
-\item{dateIsRange}{Indicating whether the time parameter is range or should be treated as single data points, default value is TRUE}
+\item{date_is_range}{Indicating whether the time parameter is range or should
+be treated as single data points, default value is TRUE}
 
 \item{country}{Get values for all subjurisdictions, default value is FALSE}
 
 \item{agency}{Agency ID, default value is NULL}
 
-\item{label}{Industry code using the jurisdiction-specific coding system (returns all 3-digit industries by default), default value is NULL}
+\item{cluster}{Cluster ID}
 
-\item{filtered}{Exclude poorly-performing industry results (use of unfiltered results is NOT recommended), default value is TRUE}
+\item{label}{Industry code using the jurisdiction-specific coding system
+(returns all 3-digit industries by default),
+default value is NULL}
 
-\item{labellevel}{Level of NAICS industries to include, default value is 3}
+\item{industry}{industry is deprecated; use label}
 
-\item{labelsource}{classification standard (NAICS, BEA, SOC), default value of "NAICS"}
+\item{filtered}{Exclude poorly-performing industry results
+(use of unfiltered results is NOT recommended),
+default value is TRUE}
 
-\item{version}{Version ID for datasets with multiple versions (if no ID is given, returns most recent version), default value is NULL}
+\item{label_level}{Level of NAICS industries to include, default value is 3}
 
-\item{download}{If not False, a path location for a downloaded csv of the results, default value is FALSE}
+\item{industry_level}{industry_level is deprecated; use label_level}
+
+\item{label_source}{classification standard (NAICS, BEA, SOC),
+default value of "NAICS"}
+
+\item{version}{Version ID for datasets with multiple versions
+(if no ID is given, returns most recent version),
+default value is NULL}
+
+\item{download}{If not False, a path location for a downloaded csv of the
+results, default value is FALSE}
 
 \item{page}{Page Number of the Response, default value is NULL}
 
-\item{verbose}{Print out the url of the API call (useful for debugging), default value is 0}
+\item{date}{date is deprecated, use year now}
+
+\item{verbose}{Print out the url of the API call (useful for debugging),
+default value is 0}
 }
 \value{
-Returns pandas dataframe with the values and various metadata, and returns empty if required parameters are not given
+Returns pandas dataframe with the values and various metadata,
+         and returns empty if required parameters are not given
 }
 \description{
 Get values for a specific jurisdiction, series, and year
 }
 \examples{
-get_values(series = array(c(1,28,33,36)), jurisdiction = 38,
-          year = array(c(1970,2003,2004,2018,2020)),
-          download="regdatamultiplefromr.csv")
-get_values(series = array(c(1,28,33,36)), jurisdiction = 38,
-          year = array(c(1970,2003,2004,2018,2020)), country=TRUE)
+get_values(
+  series = array(c(1, 28, 33, 36)), jurisdiction = 38,
+  year = array(c(1970, 2003, 2004, 2018, 2020)), country = TRUE
+)
 }

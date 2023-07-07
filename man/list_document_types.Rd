@@ -4,21 +4,21 @@
 \alias{list_document_types}
 \title{list_document_types}
 \usage{
-list_document_types(jurisdictionID = NULL, reverse = FALSE, verbose = 0)
+list_document_types(jurisdiction_id = NULL, reverse = FALSE, verbose = 0)
 }
 \arguments{
-\item{jurisdictionID}{ID for the jurisdiction}
+\item{jurisdiction_id}{ID for the jurisdiction}
 
 \item{reverse}{reverses the key-value mapping}
 
 \item{verbose}{prints out the url of the API call}
 }
 \value{
-Returns dictionary containing names of documenttypes and associated IDs
+Returns dictionary containing names of documenttypes & associated IDs
 }
 \description{
 Fetches the names of documenttypes and associated IDs
 }
 \examples{
-list_document_types(jurisdictionID=38, reverse=FALSE, verbose=0)
+list_document_types(jurisdiction_id = 38, reverse = FALSE, verbose = 0)
 }

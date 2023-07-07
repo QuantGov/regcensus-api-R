@@ -10,11 +10,11 @@ list_jurisdictions(reverse = FALSE)
 \item{reverse}{reverses the key-value mapping, default value of FALSE}
 }
 \value{
-Returns dictionary containing names of jurisdictions and associated IDs
+Returns dictionary containing names of jurisdictions & associated IDs
 }
 \description{
 Fetches names of jurisdictions and associated IDs
 }
 \examples{
-list_jurisdictions(reverse=TRUE)
+list_jurisdictions(reverse = TRUE)
 }

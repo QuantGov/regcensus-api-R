@@ -4,12 +4,12 @@
 \alias{list_dates}
 \title{list_dates}
 \usage{
-list_dates(jurisdictionID, documentType = NULL)
+list_dates(jurisdiction_id, document_type = NULL)
 }
 \arguments{
-\item{jurisdictionID}{ID for the jurisdiction}
+\item{jurisdiction_id}{ID for the jurisdiction}
 
-\item{documentType}{ID for type of document}
+\item{document_type}{ID for type of document}
 }
 \value{
 Returns list of dates available for the jurisdiction
@@ -18,5 +18,5 @@ Returns list of dates available for the jurisdiction
 Fetches the dates available for the jurisdiction
 }
 \examples{
-list_dates(jurisdictionID = 38)
+list_dates(jurisdiction_id = 38)
 }

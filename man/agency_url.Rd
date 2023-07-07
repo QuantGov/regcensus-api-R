@@ -4,10 +4,10 @@
 \alias{agency_url}
 \title{agency_url}
 \usage{
-agency_url(jurisdictionID, keyword)
+agency_url(jurisdiction_id, keyword)
 }
 \arguments{
-\item{jurisdictionID}{ID for the jurisdiction}
+\item{jurisdiction_id}{ID for the jurisdiction}
 
 \item{keyword}{search for keyword in agency name}
 }
@@ -18,5 +18,5 @@ url as a string
 Gets url call for agencies endpoint.
 }
 \examples{
-agency_url(jurisdictionID=38, keyword="test_word")
+agency_url(jurisdiction_id = 38, keyword = "test_word")
 }

@@ -4,7 +4,7 @@
 \alias{get_endpoint}
 \title{get_endpoint}
 \usage{
-get_endpoint(series, jurisdiction, year, documentType, summary = TRUE)
+get_endpoint(series, jurisdiction, year, document_type, summary = TRUE)
 }
 \arguments{
 \item{series}{Series ID(s)}
@@ -13,17 +13,22 @@ get_endpoint(series, jurisdiction, year, documentType, summary = TRUE)
 
 \item{year}{Year(s) of data}
 
-\item{documentType}{ID for type of document}
+\item{document_type}{ID for type of document}
 
-\item{summary}{Return summary instead of document level data (only one year of data is allowed for document level data), default value is TRUE}
+\item{summary}{Return summary instead of document level data
+(only one year of data is allowed for document level data),
+default value is TRUE}
 }
 \value{
-Returns the endpoint, e.g. '/state-summary' for summary-level state data
+Returns the endpoint, e.g. '/state-summary' for summary-level state
+        data
 }
 \description{
-Get endpoint for a specific series, jurisdiction, year, documentType combo
+Get endpoint for a specific series, jurisdiction, year, document_type combo
 }
 \examples{
-get_endpoint(series=c(28,33,36), jurisdiction = 38,
-              year=c(1970, 2003, 2004, 2018), documentType = 1)
+get_endpoint(
+  series = c(28, 33, 36), jurisdiction = 38,
+  year = c(1970, 2003, 2004, 2018), document_type = 1
+)
 }

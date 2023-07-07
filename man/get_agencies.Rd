@@ -4,10 +4,10 @@
 \alias{get_agencies}
 \title{get_agencies}
 \usage{
-get_agencies(jurisdictionID = NULL, keyword = NULL, verbose = 0)
+get_agencies(jurisdiction_id = NULL, keyword = NULL, verbose = 0)
 }
 \arguments{
-\item{jurisdictionID}{ID for the jurisdiction}
+\item{jurisdiction_id}{ID for the jurisdiction}
 
 \item{keyword}{search for keyword in agency name}
 
@@ -20,5 +20,5 @@ Returns pandas dataframe with the metadata
 Get metadata for all agencies of a specific jurisdiction
 }
 \examples{
-get_agencies(jurisdictionID=38, keyword="test")
+get_agencies(jurisdiction_id = 38, keyword = "test")
 }

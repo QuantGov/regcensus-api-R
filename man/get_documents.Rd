@@ -5,21 +5,21 @@
 \title{get_documents}
 \usage{
 get_documents(
-  documentID = NULL,
-  jurisdictionID = NULL,
+  document_id = NULL,
+  jurisdiction_id = NULL,
   date = NULL,
-  documentType = 1,
+  document_type = 1,
   verbose = 0
 )
 }
 \arguments{
-\item{documentID}{ID of the specific document}
+\item{document_id}{ID of the specific document}
 
-\item{jurisdictionID}{ID for the jurisdiction}
+\item{jurisdiction_id}{ID for the jurisdiction}
 
 \item{date}{Year(s) of the documents}
 
-\item{documentType}{ID for type of document, default value of 1}
+\item{document_type}{ID for type of document, default value of 1}
 
 \item{verbose}{prints out the url of the API call, default value of 0}
 }
@@ -27,8 +27,9 @@ get_documents(
 Returns pandas dataframe with the metadata
 }
 \description{
-Get metadata for documents available in a specific jurisdiction or for a specific document ID
+Get metadata for documents available in a specific jurisdiction or for a
+specific document ID
 }
 \examples{
-get_documents(jurisdictionID = 38, date = 2018)
+get_documents(jurisdiction_id = 38, date = 2018)
 }
