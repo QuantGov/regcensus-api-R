@@ -12,8 +12,7 @@
 #' @import utils
 #' @export
 jurisdictions_url <- function() {
-  URL <- .URL
-  date_format <- .date_format
-  url_call <- paste0(URL, "/jurisdictions/")
-  return (url_call)
+  url <- .url
+  url_call <- paste0(url, "/jurisdictions/")
+  return(url_call)
 }

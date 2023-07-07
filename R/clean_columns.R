@@ -11,9 +11,7 @@
 #' @import utils
 #' @export
 clean_columns <- function(df) {
-  URL <- .URL
-  date_format <- .date_format
-  pattern <- "\\v_" #column names would start with v_
+  pattern <- "\\v_" # column names would start with v_
   names(df) <- sub(pattern, "", names(df))
-  return (df)
+  return(df)
 }

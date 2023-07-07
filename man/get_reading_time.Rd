@@ -8,18 +8,18 @@ get_reading_time(
   series = 2,
   jurisdiction,
   year,
-  documentType = 1,
+  document_type = 1,
   summary = TRUE,
-  dateIsRange = TRUE,
+  date_is_range = TRUE,
   country = FALSE,
   agency = NULL,
   cluster = NULL,
   label = NULL,
   industry = NULL,
   filtered = TRUE,
-  labellevel = 3,
-  industryLevel = NULL,
-  labelsource = "NAICS",
+  label_level = 3,
+  industry_level = NULL,
+  label_source = "NAICS",
   version = NULL,
   download = FALSE,
   page = NULL,
@@ -34,11 +34,15 @@ get_reading_time(
 
 \item{year}{Year(s) of data}
 
-\item{documentType}{ID for type of document, default value of 1}
+\item{document_type}{ID for type of document, default value of 1}
 
-\item{summary}{Return summary instead of document level data (only one year of data is allowed for document level data), default value is TRUE}
+\item{summary}{Return summary instead of document level data
+(only one year of data is allowed for document level data),
+default value is TRUE}
 
-\item{dateIsRange}{Indicating whether the time parameter is range or should be treated as single data points, default value is TRUE}
+\item{date_is_range}{Indicating whether the time parameter is range or
+should be treated as single data points,
+default value is TRUE}
 
 \item{country}{Get values for all subjurisdictions, default value is FALSE}
 
@@ -46,27 +50,36 @@ get_reading_time(
 
 \item{cluster}{Cluster ID}
 
-\item{label}{Industry code using the jurisdiction-specific coding system (returns all 3-digit industries by default), default value is NULL}
+\item{label}{Industry code using the jurisdiction-specific coding system
+(returns all 3-digit industries by default),
+default value is NULL}
 
 \item{industry}{industry is deprecated; use label}
 
-\item{filtered}{Exclude poorly-performing industry results (use of unfiltered results is NOT recommended), default value is TRUE}
+\item{filtered}{Exclude poorly-performing industry results
+(use of unfiltered results is NOT recommended),
+default value is TRUE}
 
-\item{labellevel}{Level of NAICS industries to include, default value is 3}
+\item{label_level}{Level of NAICS industries to include, default value is 3}
 
-\item{industryLevel}{industryLevel is deprecated; use labellevel}
+\item{industry_level}{industry_level is deprecated; use label_level}
 
-\item{labelsource}{classification standard (NAICS, BEA, SOC), default value of "NAICS"}
+\item{label_source}{classification standard (NAICS, BEA, SOC),
+default value of "NAICS"}
 
-\item{version}{Version ID for datasets with multiple versions (if no ID is given, returns most recent version), default value is NULL}
+\item{version}{Version ID for datasets with multiple versions
+(if no ID is given, returns most recent version),
+  default value is NULL}
 
-\item{download}{If not False, a path location for a downloaded csv of the results, default value is FALSE}
+\item{download}{If not False, a path location for a downloaded csv
+of the results, default value is FALSE}
 
 \item{page}{Page Number of the Response, default value is NULL}
 
 \item{date}{date is deprecated, use year now}
 
-\item{verbose}{Print out the url of the API call (useful for debugging), default value is 0}
+\item{verbose}{Print out the url of the API call (useful for debugging),
+default value is 0}
 }
 \value{
 Returns pandas dataframe with the metadata
@@ -75,5 +88,8 @@ Returns pandas dataframe with the metadata
 Convert word counts to total reading time
 }
 \examples{
-get_reading_time(jurisdiction = 38, year = array(c(1970, 2003, 2004, 2018, 2020)))
+get_reading_time(
+  jurisdiction = 38,
+  year = array(c(1970, 2003, 2004, 2018, 2020))
+)
 }

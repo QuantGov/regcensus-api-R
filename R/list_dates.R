@@ -1,11 +1,11 @@
 #' @title list_dates
 #' @description
 #' Fetches the dates available for the jurisdiction
-#' @param jurisdictionID ID for the jurisdiction
-#' @param documentType ID for type of document
+#' @param jurisdiction_id ID for the jurisdiction
+#' @param document_type ID for type of document
 #' @return Returns list of dates available for the jurisdiction
 #' @examples
-#' list_dates(jurisdictionID = 38)
+#' list_dates(jurisdiction_id = 38)
 #' @import jsonlite
 #' @import stringr
 #' @import httr
@@ -13,8 +13,7 @@
 #' @import stats
 #' @import utils
 #' @export
-list_dates <- function(jurisdictionID, documentType=NULL) {
-  URL <- .URL
-  date_format <- .date_format
-  return (as.vector(sort(unique(get_datafinder(jurisdictionID, documentType)$year))))
+list_dates <- function(jurisdiction_id, document_type = NULL) {
+  return(as.vector(sort(unique(get_datafinder(jurisdiction_id,
+                                              document_type)$year))))
 }

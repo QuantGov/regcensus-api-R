@@ -4,21 +4,21 @@
 \alias{list_agencies}
 \title{list_agencies}
 \usage{
-list_agencies(jurisdictionID = NULL, keyword = NULL, reverse = FALSE)
+list_agencies(jurisdiction_id = NULL, keyword = NULL, reverse = FALSE)
 }
 \arguments{
-\item{jurisdictionID}{ID for the jurisdiction}
+\item{jurisdiction_id}{ID for the jurisdiction}
 
 \item{keyword}{search for keyword in agency name}
 
 \item{reverse}{reverses the key-value mapping, default value of FALSE}
 }
 \value{
-Returns dictionary containing names of agencies and their associated IDs
+Returns dictionary containing names of agencies and associated IDs
 }
 \description{
 Fetches the names of the agencies and their associated IDs
 }
 \examples{
-list_agencies(jurisdictionID=38, reverse=TRUE)
+list_agencies(jurisdiction_id = 38, reverse = TRUE)
 }

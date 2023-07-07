@@ -7,7 +7,9 @@
 get_documentation()
 }
 \value{
-Returns a dataframe with information on the source of the documentation, the source name, source citation, source url and documentation.
+Returns a dataframe with information on the source of the
+         documentation, the source name, source citation,
+         source url and documentation.
 }
 \description{
 Get documentation for projects, including citations.

@@ -6,20 +6,22 @@
 \usage{
 list_industries(
   keyword = NULL,
-  labellevel = 3,
-  labelsource = "NAICS",
-  onlyID = FALSE,
+  label_level = 3,
+  label_source = "NAICS",
+  only_id = FALSE,
   reverse = FALSE
 )
 }
 \arguments{
 \item{keyword}{search for keyword in agency name}
 
-\item{labellevel}{NAICS level (2 to 6-digit), default value of 3}
+\item{label_level}{NAICS level (2 to 6-digit), default value of 3}
 
-\item{labelsource}{classification standard (NAICS, BEA, SOC), default value of "NAICS"}
+\item{label_source}{classification standard (NAICS, BEA, SOC),
+default value of "NAICS"}
 
-\item{onlyID}{uses the NAICS code instead of name as key of dictionary, default value of FALSE}
+\item{only_id}{uses the NAICS code instead of name as key of dictionary,
+default value of FALSE}
 
 \item{reverse}{reverses the key-value mapping, default value of FALSE}
 }
@@ -30,5 +32,5 @@ Returns dictionary containing names of industries and associated IDs
 Fetches the names of industries and associated IDs
 }
 \examples{
-list_industries(onlyID=TRUE, reverse=FALSE)
+list_industries(only_id = TRUE, reverse = FALSE)
 }

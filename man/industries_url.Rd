@@ -4,14 +4,14 @@
 \alias{industries_url}
 \title{industries_url}
 \usage{
-industries_url(keyword, labellevel, labelsource)
+industries_url(keyword, label_level, label_source)
 }
 \arguments{
 \item{keyword}{search for keyword in industry name}
 
-\item{labellevel}{NAICS level (2 to 6-digit)}
+\item{label_level}{NAICS level (2 to 6-digit)}
 
-\item{labelsource}{classification standard (NAICS, BEA, SOC)}
+\item{label_source}{classification standard (NAICS, BEA, SOC)}
 }
 \value{
 url as a string

@@ -12,13 +12,11 @@
 #' @import stats
 #' @import utils
 #' @export
-get_jurisdictions <- function(verbose=0) {
-  URL <- .URL
-  date_format <- .date_format
+get_jurisdictions <- function(verbose = 0) {
   url_call <- jurisdictions_url()
   if (verbose) {
-    print (paste0('API call: ', url_call))
+    print(paste0("API call: ", url_call))
   }
   output <- clean_columns(fromJSON(content(GET(url_call), as = "parsed")))
-  return (output)
+  return(output)
 }

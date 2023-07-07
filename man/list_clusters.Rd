@@ -10,11 +10,11 @@ list_clusters(reverse = FALSE)
 \item{reverse}{reverses the key-value mapping, default value of FALSE}
 }
 \value{
-Returns dictionary containing names of clusters and their associated IDs
+Returns dictionary containing names of clusters & associated IDs
 }
 \description{
 Fetches the names of the clusters and their associated IDs
 }
 \examples{
-list_clusters(reverse=TRUE)
+list_clusters(reverse = TRUE)
 }

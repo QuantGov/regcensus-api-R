@@ -74,7 +74,7 @@ The __get_agencies__ function returns a data frame of agencies with data in RegD
 The following code snippet will return data for all agencies in the Federal United States:
 
 ```
-get_agencies(jurisdictionID = 38)
+get_agencies(jurisdiction_id = 38)
 ```
 
 Likewise, this code snippet will return data for all agencies (in any jurisdiction) containing the word "education" (not case sensitive):
@@ -92,19 +92,19 @@ The __get_industries__ function returns a data frame of industries with data in 
 The following line will get you industry information for all 4-digit NAICS industries:
 
 ```
-get_industries(labellevel = 4)
+get_industries(label_level = 4)
 ```
 
 This line will get you information for the NAICS industries:
 
 ```
-get_industries(labelsource = 'NAICS')
+get_industries(label_source = 'NAICS')
 ```
 
 Like the __get_agencies__ function, the `keyword` argument may also be used. The following code snippet will return information for all 6-digit NAICS industries with the word "fishing" in the name:
 
 ```
-get_industries(keyword = 'fishing', labellevel = 6)
+get_industries(keyword = 'fishing', label_level = 6)
 ```
 
 ## Values
@@ -149,7 +149,7 @@ To obtain the restrictions for a specific agency (or agencies), the series id su
 
 ```
 # Identify all agencies
-list_agencies(jurisdictionID=38)
+list_agencies(jurisdiction_id=38)
 
 # Call the get_values() for two agencies and series 13
 get_values(series = 13, jurisdiction = 38, year = array(c(2000, 2018)), agency = array(c(15918, 15921)))
@@ -204,7 +204,7 @@ Suppose we want to attach the agency names and other agency characteristics to t
 We can merge the agency data with the values data as in the code snippet below.
 
 ```
-agencies <- get_agencies(jurisdictionID = 38)
+agencies <- get_agencies(jurisdiction_id = 38)
 agency_by_industry <- get_values(series = array(c(1,28,33,36)), 
                                 jurisdiction = 38, 
                                 year = array(c(1990, 2000)), 

@@ -2,8 +2,9 @@
 #' @description
 #' Get API info for a specific jurisdiction and documentType
 #' @param jurisdiction ID for the jurisdiction
-#' @param documentType ID for type of document, default value is NULL
-#' @return Returns dataframe with the series and years available, along with the endpoints to access the data
+#' @param document_type ID for type of document, default value is NULL
+#' @return Returns dataframe with the series and years available,
+#'          along with the endpoints to access the data
 #' @examples
 #' get_datafinder(jurisdiction = 38)
 #' @import httr
@@ -13,15 +14,17 @@
 #' @import tidyverse
 #' @import utils
 #' @export
-get_datafinder <- function(jurisdiction, documentType=NULL) {
-  URL <- .URL
-  date_format <- .date_format
-  url <- ifelse(is.null(documentType),
-                paste0(URL, '/datafinder?jurisdiction=', jurisdiction), #paste0 -> no spaces in between
-                paste0(URL, '/datafinder?jurisdiction=', jurisdiction, '&documenttype=', documentType)
+get_datafinder <- function(jurisdiction, document_type = NULL) {
+  url <- .url
+  url <- ifelse(is.null(document_type),
+    paste0(url, "/datafinder?jurisdiction=", jurisdiction),
+    paste0(
+      url, "/datafinder?jurisdiction=", jurisdiction,
+      "&documenttype=", document_type
+    )
   )
   response <- GET(url)
-  content <- fromJSON(content(response, as = "parsed")) #will be a dataframe
+  content <- fromJSON(content(response, as = "parsed")) # will be a dataframe
   output <- clean_columns(content)
 
   if (length(output)) {
@@ -29,9 +32,8 @@ get_datafinder <- function(jurisdiction, documentType=NULL) {
     new_cols <- c("jurisdiction", "documentType", "series")
     new_output <- output %>%
       dplyr::rename(!!!setNames(old_cols, new_cols))
-  }
-  else {
+  } else {
     new_output <- data.frame()
   }
-  return (new_output)
+  return(new_output)
 }

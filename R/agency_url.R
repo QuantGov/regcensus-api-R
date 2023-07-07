@@ -1,11 +1,11 @@
 #' @title agency_url
 #' @description
 #' Gets url call for agencies endpoint.
-#' @param jurisdictionID ID for the jurisdiction
+#' @param jurisdiction_id ID for the jurisdiction
 #' @param keyword search for keyword in agency name
 #' @return url as a string
 #' @examples
-#' agency_url(jurisdictionID=38, keyword="test_word")
+#' agency_url(jurisdiction_id = 38, keyword = "test_word")
 #' @import jsonlite
 #' @import stringr
 #' @import httr
@@ -13,18 +13,15 @@
 #' @import stats
 #' @import utils
 #' @export
-agency_url <- function(jurisdictionID, keyword) {
-  URL <- .URL
-  date_format <- .date_format
+agency_url <- function(jurisdiction_id, keyword) {
+  url <- .url
   if (!is.null(keyword)) {
-    url_call <- paste0(URL, "/agencies-keyword?", "keyword=", keyword)
+    url_call <- paste0(url, "/agencies-keyword?", "keyword=", keyword)
+  } else if (!is.null(jurisdiction_id)) {
+    url_call <- paste0(url, "/agencies?", "jurisdiction=", jurisdiction_id)
+  } else {
+    print("Must include either 'jurisdiction_id' or 'keyword.'")
+    return()
   }
-  else if (!is.null(jurisdictionID)) {
-    url_call <- paste0(URL, "/agencies?", "jurisdiction=", jurisdictionID)
-  }
-  else {
-    print("Must include either 'jurisdictionID' or 'keyword.'")
-    return ()
-  }
-  return (url_call)
+  return(url_call)
 }

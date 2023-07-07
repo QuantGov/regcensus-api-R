@@ -12,7 +12,6 @@
 #' @import utils
 #' @export
 series_url <- function() {
-  URL <- .URL
-  date_format <- .date_format
-  return (paste0(URL, "/dataseries"))
+  url <- .url
+  return(paste0(url, "/dataseries"))
 }

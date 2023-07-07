@@ -4,14 +4,19 @@
 \alias{get_industries}
 \title{get_industries}
 \usage{
-get_industries(keyword = NULL, labellevel = 3, labelsource = NULL, verbose = 0)
+get_industries(
+  keyword = NULL,
+  label_level = 3,
+  label_source = NULL,
+  verbose = 0
+)
 }
 \arguments{
 \item{keyword}{search for keyword in industry name}
 
-\item{labellevel}{NAICS level (2 to 6-digit), default value of 3}
+\item{label_level}{NAICS level (2 to 6-digit), default value of 3}
 
-\item{labelsource}{classification standard (NAICS, BEA, SOC)}
+\item{label_source}{classification standard (NAICS, BEA, SOC)}
 
 \item{verbose}{prints out the url of the API call, default value of 0}
 }
