@@ -4,3 +4,5 @@
 ^CRAN-SUBMISSION$
 ^regdatamultiplefromr.csv$
 ^\.github$
+^doc$
+^Meta$
