@@ -1,13 +1,29 @@
-_The current version of RegCensusAPI is only compatible with R 4.3.0 and newer._
+---
+title: "regcensus-api-R"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{regcensus-api-R}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
 
-# RegCensus API
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(regcensus)
+```
 
 ## Introduction
-RegCensusAPI is an API client that connects to the RegData regulatory restrictions data by the Mercatus Center at George Mason University. RegData uses machine learning algorithms to quantify the number of regulatory restrictions in a jurisdiction. Currently, RegData is available for three countries - Australia, Canada, and the United States. In addition, there are regulatory restrictions data for jurisdictions (provinces in Canada and states in Australia and US) within these countries. You can find out more about RegData from https://www.quantgov.org/. 
+RegCensusAPI is an API client that connects to the RegData regulatory restrictions data by the Mercatus Center at George Mason University. RegData uses machine learning algorithms to quantify the number of regulatory restrictions in a jurisdiction. Currently, RegData is available for three countries - Australia, Canada, and the United States. In addition, there are regulatory restrictions data for jurisdictions (provinces in Canada and states in Australia and US) within these countries. You can find out more about RegData from https://www.quantgov.org. 
 
 This R API client connects to the api located at at the [QuantGov website][1]. More advanced users who want to interact with the API directly can use the link above to pull data from the RegData API. Python users can access the same features provided in this package in the Python package __regcensus__.
 
-We put together a short video tutorial, showing some of the basics of the API library. You can view that [here].
+We put together a short video tutorial, showing some of the basics of the API library. You can view that here.
 
 ## Installing and Importing __RegCensus__
 
@@ -227,3 +243,4 @@ get_values(series = array(c(1,28,33,36)), jurisdiction = 38, year = array(c(2010
 
 [1]:https://api.quantgov.org/
 [2]:https://www.quantgov.org/download-interactively
+

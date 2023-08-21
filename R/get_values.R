@@ -67,9 +67,6 @@ get_values <- function(series, jurisdiction, year, document_type = 1,
   pattern <- "[A-Za-z]"
   if (is.array(jurisdiction) && grepl(pattern, as.character(jurisdiction[1]))) {
     jurisdiction <- lapply(jurisdiction, function(x) list_jurisdictions()[[x]])
-  } else if (jurisdiction && grepl(pattern, as.character(jurisdiction))) {
-    # If jurisdiction name is passed, find ID
-    jurisdiction <- list_jurisdictions()[[jurisdiction]]
   } else {
   }
 
