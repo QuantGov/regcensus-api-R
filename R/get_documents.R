@@ -21,8 +21,8 @@ get_documents <- function(document_id = NULL, jurisdiction_id = NULL,
                           date = NULL, document_type = 1, verbose = 0) {
   if (!is.null(document_id)) {
     message <- paste0("document_id is no longer accessible as of version 1.0.",
-              " Use previous version of API or use jurisdiction_id",
-              " and date combination")
+                      " Use previous version of API or use jurisdiction_id",
+                      " and date combination")
     print(message)
     return()
   } else if (!is.null(jurisdiction_id) && !is.null(date)) {

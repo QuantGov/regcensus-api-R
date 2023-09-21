@@ -135,29 +135,29 @@ expect_equal(
 
 # list_agencies function
 expect_equal(
-  class(list_agencies(jurisdiction_id = 38, reverse = TRUE)), "list")
+  class(list_agencies(jurisdiction_id = 15, reverse = TRUE)), "list")
 
 expect_equal(
-  list_agencies(jurisdiction_id = 38, reverse = TRUE)[["16312"]],
-  "department of the interior"
+  list_agencies(jurisdiction_id = 15, reverse = TRUE)[["378"]],
+  "the public school retirement system of missouri"
 )
 
 expect_equal(
-  class(list_agencies(jurisdiction_id = 38, reverse = FALSE)),
+  class(list_agencies(jurisdiction_id = 15, reverse = FALSE)),
   "list"
 )
 
 expect_equal(
   list_agencies(
-    jurisdiction_id = 38,
+    jurisdiction_id = 15,
     reverse = FALSE
-  )[["us office of special counsel"]],
-  16311
+  )[["well installation"]],
+  326
 )
 
 expect_equal(
   class(list_agencies(
-    jurisdiction_id = 38,
+    jurisdiction_id = 15,
     reverse = TRUE, keyword = "a"
   )),
   "list"
@@ -165,10 +165,10 @@ expect_equal(
 
 expect_equal(
   list_agencies(
-    jurisdiction_id = 38,
+    jurisdiction_id = 15,
     reverse = TRUE, keyword = "a"
-  )[["1442"]],
-  "gambling (Delaware)"
+  )[["1465"]],
+  "division of historical and cultural affairs (Delaware)"
 )
 
 expect_equal(list_agencies(), NULL)
@@ -245,7 +245,7 @@ expect_equal(colnames(get_documentation())[1], "documentation_id")
 
 
 # get_documents function
-expect_equal(class(get_documents(jurisdiction_id = 38, date = 2018)),
+expect_equal(class(get_documents(jurisdiction_id = 50, date = 2022)),
              "data.frame")
 
 
@@ -350,7 +350,7 @@ expect_invisible(get_values(
 expect_equal(
   class(get_document_values(
     series = 33, jurisdiction = 38,
-    year = 2018, label = "111"
+    year = 2021, label = "111"
   )),
   "data.frame"
 )
