@@ -245,7 +245,7 @@ expect_equal(colnames(get_documentation())[1], "documentation_id")
 
 
 # get_documents function
-expect_equal(class(get_documents(jurisdiction_id = 50, date = 2022)),
+expect_equal(class(get_documents(jurisdiction_id = 65, date = 2022)),
              "data.frame")
 
 
