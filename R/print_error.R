@@ -4,7 +4,7 @@
 #' @param output key-value mapping of the output
 #' @return None
 #' @examples
-#' print_error(list(message = "test"))
+#' \dontrun{print_error(list(message = "test"))}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

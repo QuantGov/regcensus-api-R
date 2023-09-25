@@ -40,7 +40,6 @@ actual_series_url <- paste0("https://64gzqlrrd2.execute-api.us-east-1",
                             ".amazonaws.com/dev/dataseries")
 expect_equal(
   series_url(), actual_series_url
-
 )
 
 
@@ -246,7 +245,7 @@ expect_equal(colnames(get_documentation())[1], "documentation_id")
 
 # get_documents function
 expect_equal(class(get_documents(jurisdiction_id = 65, date = 2022)),
-             "data.frame")
+            "data.frame")
 
 
 # get_industries function

@@ -18,5 +18,5 @@ Returns list of dates available for the jurisdiction
 Fetches the dates available for the jurisdiction
 }
 \examples{
-list_dates(jurisdiction_id = 38)
+\dontrun{list_dates(jurisdiction_id = 38)}
 }

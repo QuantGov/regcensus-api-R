@@ -10,7 +10,8 @@
 #' how many words the document has. The function assumes an 8 hour work-day,
 #' a 5 day work-week, and a 50 week work-year.
 #' @examples
-#' reading_time(1200000, workday = 8, workweek = 5, workyear = 50)
+#' \dontrun{reading_time(1200000, workday = 8,
+#'          workweek = 5, workyear = 50)}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

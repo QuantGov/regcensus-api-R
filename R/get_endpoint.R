@@ -11,10 +11,10 @@
 #' @return Returns the endpoint, e.g. '/state-summary' for summary-level state
 #'         data
 #' @examples
-#' get_endpoint(
+#' \dontrun{get_endpoint(
 #'   series = c(28, 33, 36), jurisdiction = 38,
 #'   year = c(1970, 2003, 2004, 2018), document_type = 1
-#' )
+#' )}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

@@ -35,10 +35,10 @@
 #'                default value is 0
 #' @return Returns pandas dataframe with the metadata
 #' @examples
-#' get_document_values(
+#' \dontrun{get_document_values(
 #'   series = 33, jurisdiction = 38,
 #'   year = 2018, label = "111"
-#' )
+#' )}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

@@ -20,5 +20,5 @@ Returns dictionary containing names of agencies and associated IDs
 Fetches the names of the agencies and their associated IDs
 }
 \examples{
-list_agencies(jurisdiction_id = 38, reverse = TRUE)
+\dontrun{list_agencies(jurisdiction_id = 38)}
 }

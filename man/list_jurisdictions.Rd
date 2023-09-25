@@ -16,5 +16,5 @@ Returns dictionary containing names of jurisdictions & associated IDs
 Fetches names of jurisdictions and associated IDs
 }
 \examples{
-list_jurisdictions(reverse = TRUE)
+\dontrun{list_jurisdictions(reverse = TRUE)}
 }

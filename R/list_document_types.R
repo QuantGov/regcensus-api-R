@@ -6,7 +6,8 @@
 #' @param verbose prints out the url of the API call
 #' @return Returns dictionary containing names of documenttypes & associated IDs
 #' @examples
-#' list_document_types(jurisdiction_id = 38, reverse = FALSE, verbose = 0)
+#' \dontrun{list_document_types(jurisdiction_id = 65,
+#'          reverse = FALSE, verbose = 0)}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

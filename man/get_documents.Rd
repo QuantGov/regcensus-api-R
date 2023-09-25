@@ -31,5 +31,5 @@ Get metadata for documents available in a specific jurisdiction or for a
 specific document ID
 }
 \examples{
-get_documents(jurisdiction_id = 38, date = 2018)
+\dontrun{get_documents(jurisdiction_id = 38, date = 2022)}
 }

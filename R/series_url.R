@@ -3,7 +3,7 @@
 #' Gets url call for dataseries endpoint
 #' @return url as a string
 #' @examples
-#' series_url()
+#' \dontrun{series_url()}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

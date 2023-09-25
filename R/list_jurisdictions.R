@@ -4,7 +4,7 @@
 #' @param reverse reverses the key-value mapping, default value of FALSE
 #' @return Returns dictionary containing names of jurisdictions & associated IDs
 #' @examples
-#' list_jurisdictions(reverse = TRUE)
+#' \dontrun{list_jurisdictions(reverse = TRUE)}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

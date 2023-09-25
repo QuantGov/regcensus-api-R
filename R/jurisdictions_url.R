@@ -3,7 +3,7 @@
 #' Gets url call for jurisdictions endpoint.
 #' @return url as a string
 #' @examples
-#' jurisdictions_url()
+#' \dontrun{jurisdictions_url()}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

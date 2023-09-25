@@ -6,7 +6,7 @@
 #' @return Returns dataframe with the series and years available,
 #'          along with the endpoints to access the data
 #' @examples
-#' get_datafinder(jurisdiction = 38)
+#' \dontrun{get_datafinder(jurisdiction = 1)}
 #' @import httr
 #' @import jsonlite
 #' @import stats

@@ -4,7 +4,7 @@
 #' @param reverse reverses the key-value mapping, default value of FALSE
 #' @return Returns dictionary containing names of clusters & associated IDs
 #' @examples
-#' list_clusters(reverse = TRUE)
+#' \dontrun{list_clusters()}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

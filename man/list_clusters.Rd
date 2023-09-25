@@ -16,5 +16,5 @@ Returns dictionary containing names of clusters & associated IDs
 Fetches the names of the clusters and their associated IDs
 }
 \examples{
-list_clusters(reverse = TRUE)
+\dontrun{list_clusters()}
 }

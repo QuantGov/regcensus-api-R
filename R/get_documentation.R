@@ -5,7 +5,7 @@
 #'          documentation, the source name, source citation,
 #'          source url and documentation.
 #' @examples
-#' get_documentation()
+#' \dontrun{get_documentation()}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

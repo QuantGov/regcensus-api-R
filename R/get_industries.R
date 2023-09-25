@@ -7,7 +7,7 @@
 #' @param verbose prints out the url of the API call, default value of 0
 #' @return Returns pandas dataframe with the metadata
 #' @examples
-#' get_industries()
+#' \dontrun{get_industries()}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

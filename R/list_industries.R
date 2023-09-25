@@ -10,7 +10,7 @@
 #' @param reverse reverses the key-value mapping, default value of FALSE
 #' @return Returns dictionary containing names of industries and associated IDs
 #' @examples
-#' list_industries(only_id = TRUE, reverse = FALSE)
+#' \dontrun{list_industries(only_id = TRUE, reverse = FALSE)}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

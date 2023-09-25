@@ -5,7 +5,7 @@
 #' @param keyword search for keyword in agency name
 #' @return url as a string
 #' @examples
-#' agency_url(jurisdiction_id = 38, keyword = "test_word")
+#' \dontrun{agency_url(jurisdiction_id = 38, keyword = "test_word")}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

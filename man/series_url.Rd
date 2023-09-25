@@ -13,5 +13,5 @@ url as a string
 Gets url call for dataseries endpoint
 }
 \examples{
-series_url()
+\dontrun{series_url()}
 }

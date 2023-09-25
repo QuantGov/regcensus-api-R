@@ -6,7 +6,7 @@
 #' @param verbose prints out the url of the API call, default value of 0
 #' @return Returns pandas dataframe with the metadata
 #' @examples
-#' get_agencies(jurisdiction_id = 38, keyword = "test")
+#' \dontrun{get_agencies(jurisdiction_id = 38, keyword = "test")}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

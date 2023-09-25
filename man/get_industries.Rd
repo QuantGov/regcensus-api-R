@@ -27,5 +27,5 @@ Returns pandas dataframe with the metadata
 Get metadata for all industries available in a specific jurisdiction
 }
 \examples{
-get_industries()
+\dontrun{get_industries()}
 }

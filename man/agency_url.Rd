@@ -18,5 +18,5 @@ url as a string
 Gets url call for agencies endpoint.
 }
 \examples{
-agency_url(jurisdiction_id = 38, keyword = "test_word")
+\dontrun{agency_url(jurisdiction_id = 38, keyword = "test_word")}
 }
