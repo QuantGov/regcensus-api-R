@@ -20,7 +20,7 @@ agency_url <- function(jurisdiction_id, keyword) {
   } else if (!is.null(jurisdiction_id)) {
     url_call <- paste0(url, "/agencies?", "jurisdiction=", jurisdiction_id)
   } else {
-    print("Must include either 'jurisdiction_id' or 'keyword.'")
+    message("Must include either 'jurisdiction_id' or 'keyword.'")
     return()
   }
   return(url_call)

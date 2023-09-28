@@ -24,7 +24,7 @@ list_document_types <- function(jurisdiction_id = NULL,
     url_call <- paste0(url, "/documenttypes")
   }
   if (verbose) {
-    print(paste0("API call: ", url_call))
+    message(paste0("API call: ", url_call))
   }
   response <- fromJSON(content(GET(url_call), as = "parsed"))
   document_types <- response[!is.na(response$document_type), ]

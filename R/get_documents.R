@@ -20,10 +20,10 @@
 get_documents <- function(document_id = NULL, jurisdiction_id = NULL,
                           date = NULL, document_type = 1, verbose = 0) {
   if (!is.null(document_id)) {
-    message <- paste0("document_id is no longer accessible as of version 1.0.",
+    text <- paste0("document_id is no longer accessible as of version 1.0.",
                       " Use previous version of API or use jurisdiction_id",
                       " and date combination")
-    print(message)
+    message(text)
     return()
   } else if (!is.null(jurisdiction_id) && !is.null(date)) {
     return(get_values(series = 1, jurisdiction = jurisdiction_id,
@@ -31,7 +31,7 @@ get_documents <- function(document_id = NULL, jurisdiction_id = NULL,
                       document_type = document_type,
                       summary = FALSE))
   } else {
-    print("Must include jurisdiction_id and date")
+    message("Must include jurisdiction_id and date")
     return()
   }
 }

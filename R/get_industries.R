@@ -19,7 +19,7 @@ get_industries <- function(keyword = NULL, label_level = 3,
                            label_source = NULL, verbose = 0) {
   url_call <- industries_url(keyword, label_level, label_source)
   if (verbose) {
-    print(paste0("API call: ", url_call))
+    message(paste0("API call: ", url_call))
   }
   output <- clean_columns(fromJSON(content(GET(url_call), as = "parsed")))
   return(output)

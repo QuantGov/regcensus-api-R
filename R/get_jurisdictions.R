@@ -15,7 +15,7 @@
 get_jurisdictions <- function(verbose = 0) {
   url_call <- jurisdictions_url()
   if (verbose) {
-    print(paste0("API call: ", url_call))
+    message(paste0("API call: ", url_call))
   }
   output <- clean_columns(fromJSON(content(GET(url_call), as = "parsed")))
   return(output)

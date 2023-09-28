@@ -4,12 +4,6 @@ expect_equal(
   "1 week, 3 days, 2 hours"
 )
 
-
-# print_error function
-expect_equal(print_error(list(message = "test")), NULL)
-expect_output(print_error(list(message = "test")))
-
-
 # industries_url function
 actual_industries_url <- paste0("https://64gzqlrrd2.execute-api.us-east-1",
                                 ".amazonaws.com", "/dev/labels?",

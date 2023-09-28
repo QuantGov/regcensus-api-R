@@ -15,10 +15,10 @@
 print_error <- function(output) {
   tryCatch(
     {
-      print(paste0("ERROR: ", output$message))
+      message(paste0("ERROR: ", output$message))
     },
     error = function() {
-      print(paste0("ERROR: ", output$errorMessage))
+      message(paste0("ERROR: ", output$errorMessage))
     }
   )
   return()
