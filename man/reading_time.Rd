@@ -32,6 +32,7 @@ Computes the time it takes to read a document based on the words a
 document has.
 }
 \examples{
-reading_time(1200000, workday = 8, workweek = 5, workyear = 50)
+\dontrun{reading_time(1200000, workday = 8,
+         workweek = 5, workyear = 50)}
 reading_time(1200000, workday=8, workweek=5, workyear=50)
 }

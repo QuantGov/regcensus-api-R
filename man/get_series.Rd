@@ -16,5 +16,5 @@ Returns pandas dataframe with the metadata
 Get series metadata for all or one specific jurisdiction
 }
 \examples{
-get_series()
+\dontrun{get_series()}
 }

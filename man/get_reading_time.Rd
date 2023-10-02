@@ -88,8 +88,8 @@ Returns pandas dataframe with the metadata
 Convert word counts to total reading time
 }
 \examples{
-get_reading_time(
-  jurisdiction = 38,
-  year = array(c(1970, 2003, 2004, 2018, 2020))
-)
+\dontrun{get_reading_time(
+  jurisdiction = 45,
+  year = array(c(2022, 2023))
+)}
 }

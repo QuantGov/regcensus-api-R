@@ -20,5 +20,5 @@ url as a string
 Gets url call for label (formerly industries) endpoint.
 }
 \examples{
-industries_url("test", 323, "NAICS")
+\dontrun{industries_url("test", 323, "NAICS")}
 }

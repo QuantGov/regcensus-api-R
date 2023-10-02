@@ -16,5 +16,5 @@ None
 Handle and print out error for invalid API call.
 }
 \examples{
-print_error(list(message = "test"))
+\dontrun{print_error(list(message = "test"))}
 }

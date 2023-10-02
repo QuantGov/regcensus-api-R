@@ -5,7 +5,7 @@
 #' @param keyword search for keyword in agency name
 #' @return url as a string
 #' @examples
-#' agency_url(jurisdiction_id = 38, keyword = "test_word")
+#' \dontrun{agency_url(jurisdiction_id = 38, keyword = "test_word")}
 #' @import jsonlite
 #' @import stringr
 #' @import httr
@@ -20,7 +20,7 @@ agency_url <- function(jurisdiction_id, keyword) {
   } else if (!is.null(jurisdiction_id)) {
     url_call <- paste0(url, "/agencies?", "jurisdiction=", jurisdiction_id)
   } else {
-    print("Must include either 'jurisdiction_id' or 'keyword.'")
+    message("Must include either 'jurisdiction_id' or 'keyword.'")
     return()
   }
   return(url_call)

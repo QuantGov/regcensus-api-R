@@ -20,5 +20,5 @@ Returns pandas dataframe with the metadata
 Get metadata for all agencies of a specific jurisdiction
 }
 \examples{
-get_agencies(jurisdiction_id = 38, keyword = "test")
+\dontrun{get_agencies(jurisdiction_id = 38, keyword = "test")}
 }

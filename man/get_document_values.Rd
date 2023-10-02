@@ -87,8 +87,8 @@ Returns pandas dataframe with the metadata
 Get values for a specific jurisdiction and series at the document level
 }
 \examples{
-get_document_values(
+\dontrun{get_document_values(
   series = 33, jurisdiction = 38,
   year = 2018, label = "111"
-)
+)}
 }

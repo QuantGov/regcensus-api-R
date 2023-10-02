@@ -4,12 +4,6 @@ expect_equal(
   "1 week, 3 days, 2 hours"
 )
 
-
-# print_error function
-expect_equal(print_error(list(message = "test")), NULL)
-expect_output(print_error(list(message = "test")))
-
-
 # industries_url function
 actual_industries_url <- paste0("https://64gzqlrrd2.execute-api.us-east-1",
                                 ".amazonaws.com", "/dev/labels?",
@@ -40,7 +34,6 @@ actual_series_url <- paste0("https://64gzqlrrd2.execute-api.us-east-1",
                             ".amazonaws.com/dev/dataseries")
 expect_equal(
   series_url(), actual_series_url
-
 )
 
 
@@ -135,29 +128,29 @@ expect_equal(
 
 # list_agencies function
 expect_equal(
-  class(list_agencies(jurisdiction_id = 38, reverse = TRUE)), "list")
+  class(list_agencies(jurisdiction_id = 15, reverse = TRUE)), "list")
 
 expect_equal(
-  list_agencies(jurisdiction_id = 38, reverse = TRUE)[["16312"]],
-  "department of the interior"
+  list_agencies(jurisdiction_id = 15, reverse = TRUE)[["378"]],
+  "the public school retirement system of missouri"
 )
 
 expect_equal(
-  class(list_agencies(jurisdiction_id = 38, reverse = FALSE)),
+  class(list_agencies(jurisdiction_id = 15, reverse = FALSE)),
   "list"
 )
 
 expect_equal(
   list_agencies(
-    jurisdiction_id = 38,
+    jurisdiction_id = 15,
     reverse = FALSE
-  )[["us office of special counsel"]],
-  16311
+  )[["well installation"]],
+  326
 )
 
 expect_equal(
   class(list_agencies(
-    jurisdiction_id = 38,
+    jurisdiction_id = 15,
     reverse = TRUE, keyword = "a"
   )),
   "list"
@@ -165,10 +158,10 @@ expect_equal(
 
 expect_equal(
   list_agencies(
-    jurisdiction_id = 38,
+    jurisdiction_id = 15,
     reverse = TRUE, keyword = "a"
-  )[["1442"]],
-  "gambling (Delaware)"
+  )[["1465"]],
+  "division of historical and cultural affairs (Delaware)"
 )
 
 expect_equal(list_agencies(), NULL)
@@ -245,8 +238,8 @@ expect_equal(colnames(get_documentation())[1], "documentation_id")
 
 
 # get_documents function
-expect_equal(class(get_documents(jurisdiction_id = 38, date = 2018)),
-             "data.frame")
+expect_equal(class(get_documents(jurisdiction_id = 65, date = 2022)),
+            "data.frame")
 
 
 # get_industries function
@@ -350,7 +343,7 @@ expect_invisible(get_values(
 expect_equal(
   class(get_document_values(
     series = 33, jurisdiction = 38,
-    year = 2018, label = "111"
+    year = 2021, label = "111"
   )),
   "data.frame"
 )

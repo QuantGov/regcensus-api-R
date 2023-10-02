@@ -4,7 +4,7 @@
 #' @param reverse reverses the key-value mapping, default value of FALSE
 #' @return Returns dictionary containing names of series and associated IDs
 #' @examples
-#' list_series(reverse = FALSE)
+#' \dontrun{list_series(reverse = FALSE)}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

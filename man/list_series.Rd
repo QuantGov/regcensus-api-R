@@ -16,5 +16,5 @@ Returns dictionary containing names of series and associated IDs
 Fetches the names of series and associated IDs
 }
 \examples{
-list_series(reverse = FALSE)
+\dontrun{list_series(reverse = FALSE)}
 }

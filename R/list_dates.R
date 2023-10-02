@@ -5,7 +5,7 @@
 #' @param document_type ID for type of document
 #' @return Returns list of dates available for the jurisdiction
 #' @examples
-#' list_dates(jurisdiction_id = 38)
+#' \dontrun{list_dates(jurisdiction_id = 38)}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

@@ -6,7 +6,7 @@
 #' @param reverse reverses the key-value mapping, default value of FALSE
 #' @return Returns dictionary containing names of agencies and associated IDs
 #' @examples
-#' list_agencies(jurisdiction_id = 38, reverse = TRUE)
+#' \dontrun{list_agencies(jurisdiction_id = 38)}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

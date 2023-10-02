@@ -36,10 +36,10 @@
 #'                default value is 0
 #' @return Returns pandas dataframe with the metadata
 #' @examples
-#' get_reading_time(
-#'   jurisdiction = 38,
-#'   year = array(c(1970, 2003, 2004, 2018, 2020))
-#' )
+#' \dontrun{get_reading_time(
+#'   jurisdiction = 45,
+#'   year = array(c(2022, 2023))
+#' )}
 #' @import jsonlite
 #' @import stringr
 #' @import httr
@@ -55,6 +55,10 @@ get_reading_time <- function(series = 2, jurisdiction, year, document_type = 1,
                              label_source = "NAICS", version = NULL,
                              download = FALSE, page = NULL, date = NULL,
                              verbose = 0) {
+  #for demo example
+  if (jurisdiction == 0) {
+    return(NULL)
+  }
   results <- get_values(
     series, jurisdiction, year, document_type, summary, date_is_range,
     country, agency, cluster, label, industry, filtered, label_level,

@@ -32,5 +32,5 @@ Returns dictionary containing names of industries and associated IDs
 Fetches the names of industries and associated IDs
 }
 \examples{
-list_industries(only_id = TRUE, reverse = FALSE)
+\dontrun{list_industries(only_id = TRUE, reverse = FALSE)}
 }

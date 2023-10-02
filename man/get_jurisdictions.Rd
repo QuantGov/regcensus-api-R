@@ -16,5 +16,5 @@ Returns pandas dataframe with the metadata
 Get metadata for all or one specific jurisdiction
 }
 \examples{
-get_jurisdictions()
+\dontrun{get_jurisdictions()}
 }

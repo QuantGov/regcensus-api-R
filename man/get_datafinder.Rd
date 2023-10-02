@@ -19,5 +19,5 @@ Returns dataframe with the series and years available,
 Get API info for a specific jurisdiction and documentType
 }
 \examples{
-get_datafinder(jurisdiction = 38)
+\dontrun{get_datafinder(jurisdiction = 1)}
 }

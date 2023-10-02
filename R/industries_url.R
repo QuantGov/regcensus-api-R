@@ -6,7 +6,7 @@
 #' @param label_source classification standard (NAICS, BEA, SOC)
 #' @return url as a string
 #' @examples
-#' industries_url("test", 323, "NAICS")
+#' \dontrun{industries_url("test", 323, "NAICS")}
 #' @import jsonlite
 #' @import stringr
 #' @import httr

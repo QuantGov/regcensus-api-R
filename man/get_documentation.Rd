@@ -15,5 +15,5 @@ Returns a dataframe with information on the source of the
 Get documentation for projects, including citations.
 }
 \examples{
-get_documentation()
+\dontrun{get_documentation()}
 }

@@ -27,8 +27,8 @@ Returns the endpoint, e.g. '/state-summary' for summary-level state
 Get endpoint for a specific series, jurisdiction, year, document_type combo
 }
 \examples{
-get_endpoint(
+\dontrun{get_endpoint(
   series = c(28, 33, 36), jurisdiction = 38,
   year = c(1970, 2003, 2004, 2018), document_type = 1
-)
+)}
 }

@@ -4,7 +4,7 @@
 #' @param output key-value mapping of the output
 #' @return None
 #' @examples
-#' print_error(list(message = "test"))
+#' \dontrun{print_error(list(message = "test"))}
 #' @import jsonlite
 #' @import stringr
 #' @import httr
@@ -15,10 +15,10 @@
 print_error <- function(output) {
   tryCatch(
     {
-      print(paste0("ERROR: ", output$message))
+      message(paste0("ERROR: ", output$message))
     },
     error = function() {
-      print(paste0("ERROR: ", output$errorMessage))
+      message(paste0("ERROR: ", output$errorMessage))
     }
   )
   return()

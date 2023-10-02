@@ -6,7 +6,8 @@
 #' @param verbose prints out the url of the API call
 #' @return Returns dictionary containing names of documenttypes & associated IDs
 #' @examples
-#' list_document_types(jurisdiction_id = 38, reverse = FALSE, verbose = 0)
+#' \dontrun{list_document_types(jurisdiction_id = 65,
+#'          reverse = FALSE, verbose = 0)}
 #' @import jsonlite
 #' @import stringr
 #' @import httr
@@ -23,7 +24,7 @@ list_document_types <- function(jurisdiction_id = NULL,
     url_call <- paste0(url, "/documenttypes")
   }
   if (verbose) {
-    print(paste0("API call: ", url_call))
+    message(paste0("API call: ", url_call))
   }
   response <- fromJSON(content(GET(url_call), as = "parsed"))
   document_types <- response[!is.na(response$document_type), ]

@@ -6,7 +6,7 @@
 #' @param verbose prints out the url of the API call, default value of 0
 #' @return Returns pandas dataframe with the metadata
 #' @examples
-#' get_agencies(jurisdiction_id = 38, keyword = "test")
+#' \dontrun{get_agencies(jurisdiction_id = 38, keyword = "test")}
 #' @import jsonlite
 #' @import stringr
 #' @import httr
@@ -17,7 +17,7 @@
 get_agencies <- function(jurisdiction_id = NULL, keyword = NULL, verbose = 0) {
   url_call <- agency_url(jurisdiction_id, keyword)
   if (verbose) {
-    print(paste0("API call: ", url_call))
+    message(paste0("API call: ", url_call))
   }
   output <- clean_columns(fromJSON(content(GET(url_call), as = "parsed")))
   return(output)

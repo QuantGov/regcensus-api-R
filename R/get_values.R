@@ -36,10 +36,10 @@
 #' @return Returns pandas dataframe with the values and various metadata,
 #'          and returns empty if required parameters are not given
 #' @examples
-#' get_values(
+#' \dontrun{get_values(
 #'   series = array(c(1, 28, 33, 36)), jurisdiction = 38,
 #'   year = array(c(1970, 2003, 2004, 2018, 2020)), country = TRUE
-#' )
+#' )}
 #' @import jsonlite
 #' @import stringr
 #' @import httr
@@ -79,7 +79,7 @@ get_values <- function(series, jurisdiction, year, document_type = 1,
     error = function() {
       paste0("No data was found for these parameters.",
              " For this jurisdiction, consider the following: \n")
-      print(as.data.frame(get_datafinder(jurisdiction, document_type)))
+      message(as.data.frame(get_datafinder(jurisdiction, document_type)))
       return()
     }
   )
@@ -100,7 +100,7 @@ get_values <- function(series, jurisdiction, year, document_type = 1,
     # list of available series, and function returns empty.
   } else {
     warning("Valid series ID required. Select from the following list:")
-    print(pretty(list_series()))
+    message(pretty(list_series()))
     return()
   }
 
@@ -115,7 +115,7 @@ get_values <- function(series, jurisdiction, year, document_type = 1,
     # If no appropriate jurisdiction is given, prints warning message
     # jurisdictions, and function returns empty.
     warning("Valid jurisdiction ID required. Select from the following list:")
-    print(pretty(list_jurisdictions()))
+    message(pretty(list_jurisdictions()))
     return()
   }
 
@@ -180,9 +180,9 @@ get_values <- function(series, jurisdiction, year, document_type = 1,
     # list of available dates for the given jurisdiction(s),
     # and function returns empty.
   } else {
-    print("Valid date is required. Select from the following list:")
+    message("Valid date is required. Select from the following list:")
     dates <- list_dates(jurisdiction)
-    print(dates)
+    message(dates)
     return()
   }
 
@@ -223,7 +223,7 @@ get_values <- function(series, jurisdiction, year, document_type = 1,
 
   # Prints the url call if verbosity is flagged
   if (verbose) {
-    cat(paste0("API call: ", gsub(" ", "%20", url_call)))
+    message(paste0("API call: ", gsub(" ", "%20", url_call)))
   }
 
   # Allows user to manually select a page of the output

@@ -13,5 +13,5 @@ url as a string
 Gets url call for jurisdictions endpoint.
 }
 \examples{
-jurisdictions_url()
+\dontrun{jurisdictions_url()}
 }
